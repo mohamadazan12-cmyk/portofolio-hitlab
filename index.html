@@ -1,13 +1,124 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Class Web Dev 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mohamad Azan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Hello World, saya Mohamad Azan, peserta Tech Class Web Dev 2026!</h1>
+    <!-- Header -->
+    <header>
+        <h1>Mohamad Azan</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="hero-text">
+                <h2>Hi, it's Mohamad Azan</h2>
+                <h3>I'm an Aspiring Web Developer</h3>
+            </div>
+            <img src="porto.jpeg" alt="Mohamad Azan Profile Photo">
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a System Information student who has recently completed my first semester 
+                and is preparing to enter the second semester. Currently, I am focusing on learning 
+                HTML, CSS, and JavaScript to build a strong foundation in web development. 
+                I am highly motivated to continuously improve my skills and aim to become 
+                a professional web developer capable of building modern, responsive, 
+                and impactful websites.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Skill Name</th>
+                        <th>Proficiency Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No">1</td>
+                        <td data-label="Skill Name">HTML</td>
+                        <td data-label="Proficiency Level">Basic</td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">2</td>
+                        <td data-label="Skill Name">CSS</td>
+                        <td data-label="Proficiency Level">Basic</td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">3</td>
+                        <td data-label="Skill Name">JavaScript</td>
+                        <td data-label="Proficiency Level">Basic</td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">4</td>
+                        <td data-label="Skill Name">Git & GitHub</td>
+                        <td data-label="Proficiency Level">Basic</td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">5</td>
+                        <td data-label="Skill Name">Problem Solving</td>
+                        <td data-label="Proficiency Level">Basic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mohamad Azan. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
