@@ -1,0 +1,196 @@
+/* External stylesheet for Mohamad Azan portfolio
+   Modern dark theme, responsive, flexbox-based layout
+*/
+:root{
+  /* Light mode (default) */
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #7C5CFF;
+  --muted: #65707a;
+  --text: #0f1720;
+}
+
+/* Dark mode variables applied when body has .dark-mode */
+body.dark-mode{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --accent:#7C5CFF;
+  --muted:#98a3b3;
+  --text:#e6eef8;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg,var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, transparent 20%));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Page container */
+main{
+  max-width:1000px;
+  margin:2rem auto;
+  padding:0 1rem;
+}
+
+header{
+  text-align:center;
+  padding:1.25rem 0 0.5rem;
+}
+header h1{
+  margin:0;
+  font-weight:700;
+  color:var(--accent);
+  font-size:1.9rem;
+}
+
+/* Dark mode toggle button in header */
+#dark-toggle{
+  margin-top:.6rem;
+  margin-left:.6rem;
+  background:transparent;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:.35rem .6rem;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* Message under form */
+.form-message{
+  margin-top:.75rem;
+  padding:.6rem 0.75rem;
+  border-radius:8px;
+  background:color-mix(in srgb, var(--accent) 8%, transparent 92%);
+  color:var(--text);
+}
+
+/* Navigation */
+nav{margin:1rem 0;}
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:1.25rem;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  padding:0.5rem 0.85rem;
+  border-radius:10px;
+  font-weight:600;
+  transition:all .18s ease;
+  background:transparent;
+}
+nav a:hover{
+  background:rgba(124,92,255,0.12);
+  transform:translateY(-3px);
+}
+
+/* Sections */
+section{
+  background:rgba(0,0,0,0.02);
+  padding:1.25rem;
+  border-radius:12px;
+  margin-bottom:1.25rem;
+  box-shadow:0 8px 28px rgba(2,6,23,0.6);
+}
+
+/* Smooth transition for theme change */
+body, section, nav a, header h1, #home img, table, form input, form textarea, button{transition:background .25s ease,color .25s ease,box-shadow .25s ease,transform .12s ease}
+
+/* Hero */
+#home{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+.hero-text{flex:1}
+#home h2{margin:0;font-size:1.8rem}
+#home h3{margin:.4rem 0 0;color:var(--muted);font-weight:400}
+#home img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  box-shadow:0 12px 30px rgba(2,6,23,0.7);
+  border:3px solid rgba(124,92,255,0.08);
+  flex-shrink:0;
+}
+
+/* About */
+#about p{font-size:1rem;color:#c9d6e6;margin:0}
+
+/* Skills table improvements */
+table{width:100%;border-collapse:collapse;background:transparent;color:var(--text)}
+thead th{font-weight:600;text-align:left;padding:.9rem .75rem;color:var(--muted);border-bottom:1px solid rgba(255,255,255,0.04)}
+tbody td{padding:.8rem .75rem;border-bottom:1px solid rgba(255,255,255,0.03)}
+tbody tr{transition:transform .12s ease,background .12s ease}
+tbody tr:hover{background:rgba(124,92,255,0.04);transform:translateY(-3px)}
+
+/* Form and button */
+form label{display:block;font-weight:600;margin-top:.5rem}
+form input, form textarea{
+  width:100%;
+  padding:.6rem;
+  margin-top:.35rem;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:rgba(255,255,255,0.02);
+  color:var(--text);
+}
+button{
+  margin-top:.75rem;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:.6rem 1rem;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 8px 20px rgba(124,92,255,0.14);
+  transition:transform .12s ease,box-shadow .12s ease,opacity .12s ease;
+}
+button:hover{transform:translateY(-4px);opacity:.98}
+
+/* Footer */
+footer{color:var(--muted);text-align:center;padding:1rem 0}
+
+/* Responsive adjustments */
+@media (max-width:768px){
+  nav ul{flex-direction:column;gap:.5rem}
+  #home{flex-direction:column;text-align:center}
+  .hero-text{order:1}
+  #home img{order:2;margin:0 auto;width:140px;height:140px}
+  header h1{font-size:1.5rem}
+  #home h2{font-size:1.4rem}
+  #home h3{font-size:1rem}
+  main{margin:1rem auto}
+
+  /* Make table behave like stacked cards on small screens */
+  table, thead, tbody, th, td, tr{display:block;width:100%}
+  thead{display:none}
+  tbody tr{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;margin-bottom:.75rem}
+  tbody td{padding:.4rem 0;border-bottom:0}
+  tbody td:before{
+    content:attr(data-label);
+    display:block;
+    font-weight:600;
+    color:var(--muted);
+    margin-bottom:.25rem;
+  }
+}
+
+/* Utility */
+.small{font-size:.9rem;color:var(--muted)}
+
+/* Accessibility focus states */
+a:focus, button:focus, input:focus, textarea:focus{outline:2px solid rgba(124,92,255,0.18);outline-offset:2px}
